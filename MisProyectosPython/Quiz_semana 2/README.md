@@ -19,7 +19,7 @@ Una cámara de comercio necesita un pequeño programa para analizar la informaci
 | num_empleados      | 150            |
 | ingresos_anuales   | 500000000      |
 
-Los registros están en el archivo **`empresas.txt`** (formato CSV, una empresa por línea):
+Los registros están en el archivo **`empresas.txt`** (una empresa por línea):
 
 ```
 TechNova,TECNOLOGIA,150,500000000
@@ -90,7 +90,7 @@ Clona el repositorio del curso y entra a la carpeta del quiz:
 
 ```bash
 git clone https://github.com/SimonP8/FUNDAMENTOS-DE-SOFTWARE.git
-cd "FUNDAMENTOS-DE-SOFTWARE/MisProyectosPython/Quiz_semana 1"
+cd "FUNDAMENTOS-DE-SOFTWARE/MisProyectosPython/Quiz_semana 2"
 ```
 
 > 💡 También puedes hacerlo desde **VS Code**: pestaña *Source Control* → *Clone Repository*.
@@ -99,24 +99,17 @@ cd "FUNDAMENTOS-DE-SOFTWARE/MisProyectosPython/Quiz_semana 1"
 Completa los `# TODO` en `quiz_empresas.py` y ejecútalo hasta que la salida coincida con la
 esperada. Documenta tu código con comentarios y docstrings.
 
-### Paso 3 — Sube tu solución (opcional pero recomendado)
+### Paso 3 — Sube tu solución
 Tal como practicamos en clase, crea **tu propio repositorio privado** en GitHub y sube tu
-carpeta resuelta:
-
-```bash
-git init
-git add quiz_empresas.py
-git commit -m "Quiz 1 resuelto"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/quiz-1-fundamentos.git
-git push -u origin main
-```
+carpeta resuelta.
 
 ### Paso 4 — Dame acceso para revisar
 Como tu repositorio es **privado**, agrégame como colaborador para poder calificarlo:
 - En tu repo: **Settings → Collaborators → Add people**
 - Usuario de GitHub: **`SimonP8`** · o invítame al correo **`Simonpelaez.loaiza@gmail.com`**
 
+### Paso 5 - Entrega del quiz en canvas
+En la plataforma canvas sube un documento donde se evidencia el 
 ---
 
 ## 📊 ¿Qué se evalúa?
