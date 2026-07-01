@@ -1,28 +1,18 @@
-// schema.prisma
-// Aqui le decimos a Prisma DOS cosas:
-//   1) A que base de datos conectarse  (datasource)
-//   2) Que forma tiene nuestra tabla    (model)
-//
-// Nota: SQLite NO es un servidor. Guarda TODO en un solo archivo (transacciones.db).
-// No hay que "prender" nada: el archivo es la base de datos.
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = "5"
+  interface            = "sync"
+}
 
 datasource db {
   provider = "sqlite"
   url      = "file:./transacciones.db"
 }
 
-generator client {
-  // Generamos un cliente para Python en modo "sync" (sin async/await) = mas simple.
-  provider             = "prisma-client-py"
-  interface            = "sync"
-  recursive_type_depth = 5
-}
-
-// Esta es nuestra tabla. Cada fila = una transaccion.
 model Transaccion {
-  id      Int    @id @default(autoincrement())  // Clave que se llena sola: 1, 2, 3...
-  codigo  String @unique                         // El ID del .txt: T001, T002... (no se repite)
-  tipo    String                                 // CREDITO o DEBITO
-  monto   Int                                    // Monto ya validado (nunca negativo)
-  impacto Float                                  // Resultado de calcular_impacto() (POLIMORFISMO)
+  id      Int    @id @default(autoincrement())
+  codigo  String @unique
+  tipo    String
+  monto   Int
+  impacto Float
 }

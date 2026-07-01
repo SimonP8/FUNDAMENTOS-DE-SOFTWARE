@@ -41,7 +41,7 @@ class TransaccionCredito(TransaccionBase):
 
 class TransaccionDebito(TransaccionBase):
     def calcular_impacto(self):             # POLIMORFISMO
-        return 1500                         # comision fija
+        return 1500                        # comision fija
 
 
 # 3) Crear el objeto correcto segun el TIPO (abierto a extension - OCP)
