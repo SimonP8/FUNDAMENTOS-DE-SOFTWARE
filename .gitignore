@@ -30,3 +30,6 @@ $RECYCLE.BIN/
 *.tmp
 *.bak
 *.swp
+
+# ----- Archivos temporales de Office (se crean al abrir Excel/Word) -----
+~$*

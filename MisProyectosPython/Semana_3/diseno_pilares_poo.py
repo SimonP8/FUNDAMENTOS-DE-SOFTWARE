@@ -58,6 +58,8 @@ def leer_transacciones(nombre_archivo):
     transacciones = []
     with open(nombre_archivo, "r", encoding="utf-8") as archivo:
         for linea in archivo:
+            if not linea.strip():
+                continue  # ignora lineas en blanco (por ejemplo el salto final del archivo)
             id_transaccion, tipo, monto = linea.strip().split(",")
             try:
                 transacciones.append(crear_transaccion(id_transaccion, tipo, monto))

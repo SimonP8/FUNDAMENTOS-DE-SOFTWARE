@@ -1,0 +1,18 @@
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = "5"
+  interface            = "sync"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Transaccion {
+  id      Int    @id @default(autoincrement())
+  codigo  String @unique
+  tipo    String
+  monto   Int
+  impacto Float
+}

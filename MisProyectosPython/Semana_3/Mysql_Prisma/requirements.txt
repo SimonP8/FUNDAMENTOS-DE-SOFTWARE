@@ -1,0 +1,4 @@
+# Cliente de Prisma para Python (trae el comando `prisma`, no necesitas Node.js).
+prisma
+# Carga las variables del archivo .env cuando ejecutas los scripts de Python.
+python-dotenv

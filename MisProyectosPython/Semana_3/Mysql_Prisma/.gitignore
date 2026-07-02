@@ -1,0 +1,12 @@
+# Cache de Python y entorno virtual (cada quien lo crea en su maquina)
+__pycache__/
+.venv/
+
+# ------------------------------------------------------------------
+# NOTA sobre .env:
+# En un proyecto REAL, el .env lleva credenciales y NO se sube (se ignora).
+# Aqui lo dejamos versionado A PROPOSITO porque es una base de datos LOCAL
+# de practica (contrasena 12345, sin datos sensibles).
+# Si prefieres NO subirlo, quita el "#" de la linea de abajo:
+
+# .env
