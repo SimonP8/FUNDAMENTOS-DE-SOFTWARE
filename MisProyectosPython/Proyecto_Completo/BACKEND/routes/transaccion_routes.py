@@ -33,3 +33,5 @@ def actualizar(id):
 def eliminar(id):
     data, status = controller.eliminar_transaccion(id)
     return jsonify(data), status
+
+

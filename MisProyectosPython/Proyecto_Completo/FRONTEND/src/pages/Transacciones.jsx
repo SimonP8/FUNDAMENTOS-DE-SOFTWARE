@@ -82,7 +82,7 @@ function Transacciones() {
               CRUD de Transacciones
             </h1>
             <p className="text-sm text-blue-600/70">
-              Frontend (React + Vite + Tailwind) hablando con el backend (Flask) por HTTP/JSON.
+              Frontend (React + Vite + Tailwind) hablando con (Flask) por HTTP/JSON.
             </p>
           </div>
         </div>
@@ -113,6 +113,7 @@ function Transacciones() {
             >
               <option value="CREDITO">CREDITO</option>
               <option value="DEBITO">DEBITO</option>
+              <option value="TRANSFERENCIA">TRANSFERENCIA</option>
             </select>
           </div>
 

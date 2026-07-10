@@ -39,3 +39,4 @@ def eliminar_transaccion(id):
         return {"mensaje": "Transaccion eliminada"}, 200
     except Exception as e:
         return {"error": str(e)}, 400
+

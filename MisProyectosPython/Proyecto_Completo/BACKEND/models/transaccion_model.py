@@ -2,7 +2,7 @@ from db import db
 
 
 def obtener_todas():
-    return db.transaccion.find_many(order={"id": "asc"})
+    return db.transaccion.find_many(order={"id": "desc"})
 
 
 def obtener_por_id(id):

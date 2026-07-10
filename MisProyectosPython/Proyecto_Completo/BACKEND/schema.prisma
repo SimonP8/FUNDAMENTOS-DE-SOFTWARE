@@ -16,3 +16,10 @@ model Transaccion {
   monto   Int
   impacto Float
 }
+
+model Usuario {
+  id       Int    @id @default(autoincrement())
+  nombre   String
+  correo   String @unique
+  password String
+}
