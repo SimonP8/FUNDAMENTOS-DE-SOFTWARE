@@ -67,3 +67,5 @@ git push
 
 > Este repositorio es **público** para poder ser evaluado. No subimos contraseñas ni
 > archivos sensibles (ver `.gitignore`).
+
+ejemplo
