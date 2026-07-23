@@ -47,6 +47,7 @@ if __name__ == "__main__":
     ultimo = None
     for _ in range(100):
         ultimo = BancoCentral()
+        print("id(ultimo):", id(ultimo))
     print("El #100 es el mismo?:", ultimo is banco_a)     # True
 
 

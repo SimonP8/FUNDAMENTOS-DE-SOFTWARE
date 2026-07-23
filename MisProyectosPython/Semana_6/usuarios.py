@@ -71,7 +71,7 @@ if __name__ == "__main__":
     ana.recargar_wallet(100000)
     print("Saldo tras pagar 30000:", ana.realizar_pago(30000))
 
-    empresa = UsuarioEmpresa("Quantum SAS", "900123456-7")
-    empresa.recargar_wallet(500000)
-    print(empresa.generar_factura())
-    print("Saldo empresa:", empresa.realizar_pago(200000))
+    bancolombia = UsuarioEmpresa("Bancolombia", "900123456-7")
+    bancolombia.recargar_wallet(500000)
+    print(bancolombia.generar_factura())
+    print("Saldo empresa:", bancolombia.realizar_pago(200000))
