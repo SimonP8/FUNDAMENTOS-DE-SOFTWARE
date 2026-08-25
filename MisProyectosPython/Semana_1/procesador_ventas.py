@@ -5,6 +5,22 @@
 # Para ejecutar:  python procesador_ventas.py
 
 
+
+# 2) Sumar el valor de todas las ventas
+def calcular_valor_total(lista_ventas):
+    total = 0
+    for venta in lista_ventas:
+        total = total + venta["valor"]
+    return total
+
+# 3) Dejar solo las ventas de una categoria
+def filtrar_por_categoria(lista_ventas, categoria):
+    lista_filtrada = []
+    for venta in lista_ventas:
+        if venta["categoria"] == categoria:
+            lista_filtrada.append(venta)
+    return lista_filtrada
+
 # 1) Leer el archivo y guardar las ventas en una lista de diccionarios
 def cargar_ventas(nombre_archivo):
     lista_ventas = []
@@ -20,23 +36,6 @@ def cargar_ventas(nombre_archivo):
     return lista_ventas
 
 
-# 2) Sumar el valor de todas las ventas
-def calcular_valor_total(lista_ventas):
-    total = 0
-    for venta in lista_ventas:
-        total = total + venta["valor"]
-    return total
-
-
-# 3) Dejar solo las ventas de una categoria
-def filtrar_por_categoria(lista_ventas, categoria):
-    lista_filtrada = []
-    for venta in lista_ventas:
-        if venta["categoria"] == categoria:
-            lista_filtrada.append(venta)
-    return lista_filtrada
-
-
 # 4) Funcion principal que usa todas las demas
 def ejecutar_sistema():
     ventas = cargar_ventas("ventas.txt")
@@ -44,8 +43,8 @@ def ejecutar_sistema():
     total = calcular_valor_total(ventas)
     print("Valor total de las ventas:", total)
 
-    electronica = filtrar_por_categoria(ventas, "ELECTRONICA")
-    print("Ventas de ELECTRONICA:")
+    electronica = filtrar_por_categoria(ventas, "JUGUETERIA")
+    print("Ventas de JUGUETERIA:")
     for venta in electronica:
         print(venta)
 

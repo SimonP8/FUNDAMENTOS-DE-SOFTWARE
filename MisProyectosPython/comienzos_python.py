@@ -26,7 +26,7 @@ print()  # linea en blanco
 # 2) CONDICIONALES (if / elif / else)
 # El programa decide segun se cumpla o no una condicion.
 
-nota = 3.7
+nota = 2.9
 
 if nota >= 4.5:
     print("Excelente")
@@ -65,7 +65,7 @@ def sumar(a, b):               # recibe dos parametros
     return a + b               # devuelve la suma
 
 # Para usar una funcion se la "llama" con sus datos:
-print(saludar("Ana"))          # Hola, Ana
+print(saludar("Simon"))          # Hola, Simon
 print("Suma:", sumar(3, 5))    # Suma: 8
 
 print()
@@ -74,12 +74,12 @@ print()
 # 5) BUCLE FOR
 # Repite un bloque una vez por cada elemento de una coleccion (lista, texto...).
 
-notas = [4.5, 3.8, 5.0]
+notas = [4.5, 3.8, 5.0, 2.9]  # lista de notas
 for nota in notas:             # 'nota' toma cada valor de la lista
     print("Nota:", nota)
 
 # range(1, 4) genera 1, 2, 3  (el final no se incluye)
-for numero in range(1, 4):
+for numero in range(1, 10):
     print("Numero:", numero)
 
 print()
@@ -90,7 +90,7 @@ print()
 # Hay que cambiar la condicion dentro del bucle para que algun dia termine.
 
 contador = 1
-while contador <= 3:           # mientras contador sea 1, 2 o 3
+while contador < 3:           # mientras contador sea 1, 2 o 3
     print("Contador:", contador)
     contador = contador + 1    # si no aumentamos, seria un bucle infinito
 

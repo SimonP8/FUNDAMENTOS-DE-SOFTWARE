@@ -26,7 +26,7 @@ un número. Si alguien escribe `"Valor"` con mayúscula, olvida convertir a `int
 un diccionario incompleto, **el error no salta donde está el problema**, sino más adelante,
 cuando la función intenta usar ese dato. Resultado: pasas horas buscando el fallo lejos de
 su verdadero origen.
-hola
+
 > En POO, los datos y su lógica viven **juntos** dentro del objeto. El objeto se construye
 > con sus datos correctos desde el inicio (en el constructor `__init__`) y él mismo sabe
 > calcularse. Eso reduce drásticamente este tipo de errores.

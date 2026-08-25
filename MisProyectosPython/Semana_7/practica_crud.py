@@ -36,6 +36,7 @@ def crear_contactos():
         ("Trabajo", "3009998877", 1),
         ("Mejor amigo", "3005556644", 1),
         ("Emergencias", "123", 1),
+        ("Nubank", "3007778899", 2),
     ]
     # executemany inserta toda la lista de una vez, con parametros seguros (?)
     con.executemany(
@@ -44,7 +45,7 @@ def crear_contactos():
     )
     con.commit()
     con.close()
-    print("C - Create: 5 contactos insertados para el usuario 1.")
+    print("C - Create: 6 contactos insertados para el usuario 1.")
 
 
 # ---------- R : READ ----------
