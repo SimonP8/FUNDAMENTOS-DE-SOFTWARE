@@ -1,4 +1,4 @@
-# Quiz 1 — Fundamentos de Programación 🧩
+# Quiz 1 — Fundamentos de Software 🧩
 
 ¡Hora de poner en práctica lo aprendido! En este quiz vas a demostrar que dominas lo visto
 hasta ahora: **Programación Estructurada** (funciones y lectura de archivos de texto) y los
