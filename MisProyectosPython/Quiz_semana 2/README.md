@@ -85,6 +85,9 @@ Promedio de empleados: 127.86
 
 ## 📤 ¿Cómo entregar?
 
+> 🎯 **La entrega es un repositorio PÚBLICO en GitHub.** No tienes que agregarme como
+> colaborador ni subir archivos a Canvas: en Canvas solo pegas el **enlace** de tu repo.
+
 ### Paso 1 — Descarga el quiz
 Clona el repositorio del curso y entra a la carpeta del quiz:
 
@@ -99,17 +102,37 @@ cd "FUNDAMENTOS-DE-SOFTWARE/MisProyectosPython/Quiz_semana 2"
 Completa los `# TODO` en `quiz_empresas.py` y ejecútalo hasta que la salida coincida con la
 esperada. Documenta tu código con comentarios y docstrings.
 
-### Paso 3 — Sube tu solución
-Tal como practicamos en clase, crea **tu propio repositorio privado** en GitHub y sube tu
-carpeta resuelta.
+### Paso 3 — Crea TU repositorio público
+En GitHub crea un repositorio **nuevo** llamado **`quiz_semana2`** y marca la opción
+**Public** (público). No agregues README ni .gitignore desde GitHub, para evitar conflictos.
 
-### Paso 4 — Dame acceso para revisar
-Como tu repositorio es **privado**, agrégame como colaborador para poder calificarlo:
-- En tu repo: **Settings → Collaborators → Add people**
-- Usuario de GitHub: **`SimonP8`** · o invítame al correo **`Simonpelaez.loaiza@gmail.com`**
+Luego, desde la carpeta con tu solución:
 
-### Paso 5 - Entrega del quiz en canvas
-En la plataforma canvas sube un documento donde se evidencia que se compartió el repositorio con el docente.
+```bash
+git init
+git add quiz_empresas.py empresas.txt
+git commit -m "Quiz Semana 2 resuelto"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/quiz_semana2.git
+git push -u origin main
+```
+
+> 💡 En VS Code: *Source Control* → **Publish to GitHub** → elige **Public repository**.
+
+### Paso 4 — Verifica que sea público
+Abre el enlace de tu repositorio en una **ventana de incógnito**. Si el código se ve sin
+iniciar sesión, está público y listo para calificar. Si pide contraseña o dice *404*, aún
+está privado: ve a **Settings → General → Danger Zone → Change visibility → Make public**.
+
+### Paso 5 — Entrega en Canvas
+En la tarea de Canvas pega el **enlace de tu repositorio público**, por ejemplo:
+
+```
+https://github.com/TU_USUARIO/quiz_semana2
+```
+
+Eso es todo: **el enlace es la entrega**.
+
 ---
 
 ## 📊 ¿Qué se evalúa?

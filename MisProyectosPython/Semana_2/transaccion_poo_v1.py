@@ -51,7 +51,7 @@ class Venta:
         (self.producto_id, self.categoria, self.valor), sin que se los tengan
         que pasar desde afuera como en la version de PE.
         """
-        return f"{self.producto_id} | {self.categoria} | ${self.valor}"
+        return f"{self.producto_id} - {self.categoria} - ${self.valor}"
 
 
 # 2) Leer el archivo y crear una LISTA DE OBJETOS (ya no de diccionarios).
