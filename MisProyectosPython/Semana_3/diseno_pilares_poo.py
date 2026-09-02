@@ -96,6 +96,8 @@ class TransaccionBase:
 # El (TransaccionBase) entre parentesis es la herencia: estas clases reciben
 # gratis el __init__, el getter, el setter y obtener_informacion(). Solo
 # escriben aquello que las hace diferentes.
+
+
 class TransaccionCredito(TransaccionBase):
     def calcular_impacto(self):             # POLIMORFISMO: sobreescribe al padre
         return round(self.monto * 0.02, 2)  # tasa de interes del 2%
@@ -105,6 +107,9 @@ class TransaccionDebito(TransaccionBase):
     def calcular_impacto(self):             # POLIMORFISMO: sobreescribe al padre
         return 1500                         # comision fija
 
+class TransaccionEfectivo(TransaccionBase):
+    def calcular_impacto(self):             # POLIMORFISMO: sobreescribe al padre
+        return round(self.monto * 0.01, 2)  # tasa de interes del 1%
 
 # =====================================================================
 # 3) Crear el objeto correcto segun el TIPO (aqui se aplica el OCP)
@@ -121,6 +126,9 @@ def crear_transaccion(id_transaccion, tipo, monto):
         return TransaccionCredito(id_transaccion, monto)
     if tipo == "DEBITO":
         return TransaccionDebito(id_transaccion, monto)
+    if tipo == "EFECTIVO":
+        return TransaccionEfectivo(id_transaccion, monto)
+        
     raise ValueError(f"tipo desconocido '{tipo}'")
 
 
