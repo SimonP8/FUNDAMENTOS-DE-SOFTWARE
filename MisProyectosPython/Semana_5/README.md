@@ -52,7 +52,7 @@ Algunos ejemplos requieren librerías; instálalas con:
 ```bash
 pip install pandas openpyxl
 ```
-
+hago modificacion
 ---
 
 ## 🔧 Flujo de trabajo con Git (Semana 5)
