@@ -9,9 +9,11 @@ _solucion_docente/
 *_solucion.py
 
 # ----- Python -----
-__pycache__/
+_pycache__/
 *.py[cod]
-*.pyo
+*.pyo_
+
+
 
 # ----- Entornos virtuales -----
 venv/
