@@ -37,8 +37,14 @@ CREATE TABLE IF NOT EXISTS wallets (
 """)
 
 # 4) INSERCION de prueba (empezamos limpio para poder repetir el script)
+#    Primero se borran las tablas HIJAS (las que tienen FK hacia usuarios) y
+#    al final la tabla PADRE; si no, la FK impide borrar los usuarios.
+#    'contactos' la crea practica_crud.py y se vuelve a crear al ejecutarlo.
+cursor.execute("DROP TABLE IF EXISTS contactos;")
 cursor.execute("DELETE FROM wallets;")
 cursor.execute("DELETE FROM usuarios;")
+# DELETE no reinicia el AUTOINCREMENT: lo reiniciamos para que los ids vuelvan a empezar en 1
+cursor.execute("DELETE FROM sqlite_sequence WHERE name IN ('usuarios', 'wallets');")
 
 cursor.execute(
     "INSERT INTO usuarios (nombre, email, nit) VALUES (?, ?, ?);",

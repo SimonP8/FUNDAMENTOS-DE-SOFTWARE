@@ -27,9 +27,12 @@ def crear_tabla_contactos():
 
 # ---------- C : CREATE ----------
 def crear_contactos():
-    """Inserta 5 contactos para el usuario 1."""
+    """Inserta 6 contactos: 5 para el usuario 1 y 1 para el usuario 2."""
     con = sqlite3.connect(RUTA)
     con.execute("DELETE FROM contactos;")   # limpio para poder repetir el ejercicio
+    # DELETE no reinicia el AUTOINCREMENT: sin esto, los ids seguirian en 7, 8...
+    # y el Update/Delete de los contactos 1 y 2 no encontrarian nada.
+    con.execute("DELETE FROM sqlite_sequence WHERE name = 'contactos';")
     contactos = [
         ("Mama", "3001112233", 1),
         ("Casa", "6041234567", 1),
@@ -45,7 +48,7 @@ def crear_contactos():
     )
     con.commit()
     con.close()
-    print("C - Create: 6 contactos insertados para el usuario 1.")
+    print("C - Create: 6 contactos insertados (5 del usuario 1 y 1 del usuario 2).")
 
 
 # ---------- R : READ ----------

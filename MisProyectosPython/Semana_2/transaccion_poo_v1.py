@@ -35,7 +35,7 @@ class Venta:
     def __init__(self, producto_id, categoria, valor):
         """
         Constructor: Python lo ejecuta automaticamente, una sola vez, al
-        instanciar un objeto -- por ejemplo con Venta("P001", "HOGAR", 120000).
+        instanciar un objeto -- por ejemplo con Venta("P002", "HOGAR", 120000).
 
         'self' es el objeto que se esta creando en ESE momento: cada linea
         de aqui abajo dice "guarda este dato como MIO", sin mezclarse con

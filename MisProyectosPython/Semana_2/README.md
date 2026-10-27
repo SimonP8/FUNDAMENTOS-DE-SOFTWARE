@@ -21,7 +21,7 @@ pocos casos, pero tiene problemas cuando el sistema crece.
 ### ¿Por qué tener los datos (cliente_id, monto) separados de la lógica (calcular_total) crea un riesgo de debugging?
 
 Porque **nada garantiza que los datos y la función "encajen"**. La función
-`calcular_total` confía en que el diccionario tenga exactamente la clave `valor` y que sea
+`calcular_valor_total` confía en que el diccionario tenga exactamente la clave `valor` y que sea
 un número. Si alguien escribe `"Valor"` con mayúscula, olvida convertir a `int`, o le pasa
 un diccionario incompleto, **el error no salta donde está el problema**, sino más adelante,
 cuando la función intenta usar ese dato. Resultado: pasas horas buscando el fallo lejos de

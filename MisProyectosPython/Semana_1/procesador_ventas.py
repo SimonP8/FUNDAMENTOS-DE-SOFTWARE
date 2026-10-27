@@ -15,9 +15,9 @@ def calcular_valor_total(lista_ventas):
 
 # 3) Dejar solo las ventas de una categoria
 def filtrar_por_categoria(lista_ventas, categoria):
-    lista_filtrada = []
-    for venta in lista_ventas:
-        if venta["categoria"] == categoria:
+    lista_filtrada = [] # lista para almacenar las ventas filtradas
+    for venta in lista_ventas: # recorrer todas las ventas
+        if venta["categoria"] == categoria: # si la categoria coincide
             lista_filtrada.append(venta)
     return lista_filtrada
 
@@ -30,7 +30,7 @@ def cargar_ventas(nombre_archivo):
             venta = {
                 "producto_id": partes[0],
                 "categoria": partes[1],
-                "valor": int(partes[2]),  # convertir el valor a numero
+                "valor": int(partes[2])  # convertir el valor a numero
             }
             lista_ventas.append(venta)
     return lista_ventas
@@ -43,9 +43,9 @@ def ejecutar_sistema():
     total = calcular_valor_total(ventas)
     print("Valor total de las ventas:", total)
 
-    electronica = filtrar_por_categoria(ventas, "JUGUETERIA")
+    jugueteria = filtrar_por_categoria(ventas, "JUGUETERIA")
     print("Ventas de JUGUETERIA:")
-    for venta in electronica:
+    for venta in jugueteria:
         print(venta)
 
 

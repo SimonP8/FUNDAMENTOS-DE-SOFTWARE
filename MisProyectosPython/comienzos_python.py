@@ -78,7 +78,7 @@ notas = [4.5, 3.8, 5.0, 2.9]  # lista de notas
 for nota in notas:             # 'nota' toma cada valor de la lista
     print("Nota:", nota)
 
-# range(1, 4) genera 1, 2, 3  (el final no se incluye)
+# range(1, 10) genera 1, 2, 3 ... 9  (el final no se incluye)
 for numero in range(1, 10):
     print("Numero:", numero)
 
@@ -90,7 +90,7 @@ print()
 # Hay que cambiar la condicion dentro del bucle para que algun dia termine.
 
 contador = 1
-while contador < 3:           # mientras contador sea 1, 2 o 3
+while contador < 3:           # mientras contador sea menor que 3 (1 y 2)
     print("Contador:", contador)
     contador = contador + 1    # si no aumentamos, seria un bucle infinito
 

@@ -43,7 +43,7 @@ python configurar_db.py
 
 `practica_crud.py` demuestra las 4 operaciones (cada una en su función comentada):
 
-- **C — Create:** inserta 5 contactos para el usuario 1.
+- **C — Create:** inserta 6 contactos: 5 para el usuario 1 y 1 para el usuario 2.
 - **R — Read:** muestra en consola los contactos del usuario 1.
 - **U — Update:** cambia el apodo de un contacto (con `WHERE` para no tocar los demás).
 - **D — Delete:** elimina el contacto con id 2.
@@ -54,7 +54,7 @@ python practica_crud.py
 
 Salida esperada (resumida):
 ```
-C - Create: 5 contactos insertados para el usuario 1.
+C - Create: 6 contactos insertados (5 del usuario 1 y 1 del usuario 2).
 R - Read: contactos del usuario 1:
     (1, 'Mama', '3001112233')
     (2, 'Casa', '6041234567')
