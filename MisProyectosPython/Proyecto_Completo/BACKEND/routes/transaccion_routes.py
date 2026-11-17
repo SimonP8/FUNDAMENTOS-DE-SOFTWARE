@@ -31,6 +31,7 @@ def actualizar(id):
 # PROGRAMANDO 
 
 
+
 @transaccion_bp.route("/<int:id>", methods=["DELETE"])
 def eliminar(id):
     data, status = controller.eliminar_transaccion(id)
