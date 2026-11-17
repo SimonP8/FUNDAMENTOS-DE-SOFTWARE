@@ -28,6 +28,8 @@ def actualizar(id):
     data, status = controller.actualizar_transaccion(id, request.get_json())
     return jsonify(data), status
 
+# PROGRAMANDO 
+
 
 @transaccion_bp.route("/<int:id>", methods=["DELETE"])
 def eliminar(id):

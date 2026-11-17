@@ -114,6 +114,8 @@ class TransaccionEfectivo(TransaccionBase):
 # =====================================================================
 # 3) Crear el objeto correcto segun el TIPO (aqui se aplica el OCP)
 # =====================================================================
+
+
 def crear_transaccion(id_transaccion, tipo, monto):
     """
     Decide que clase instanciar segun el tipo leido del archivo.
